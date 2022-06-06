@@ -3,8 +3,6 @@
 # Purpose: Putting Python principles together in one project
 #          as part of the Tech Academy Python Course.
 
-from pydoc import describe
-
 
 def start(nice = 0, mean = 0, name = ""):
   name = describe_game(name)
