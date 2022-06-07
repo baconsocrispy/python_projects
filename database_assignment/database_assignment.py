@@ -13,9 +13,6 @@
 import sqlite3
 import os
 
-# establish connection to database
-conn = sqlite3.connect('db_assign.db')
-
 # main program function
 def get_store_and_print_txts_from_folder(target_folder):
   create_txt_table()
@@ -26,6 +23,7 @@ def get_store_and_print_txts_from_folder(target_folder):
 
 # create 2 column table to store file names
 def create_txt_table():
+  conn = sqlite3.connect('db_assign.db')
   with conn:
     cursor = conn.cursor()
     cursor.execute('CREATE TABLE IF NOT EXISTS txt_files ( \
