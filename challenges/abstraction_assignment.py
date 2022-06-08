@@ -14,7 +14,7 @@ class LifeForm:
   # regular method
   def dies(self):
     self.alive = False
-    print('The {} is dead now...'.format(type(self).__name__))
+    print('The {} is dead now...'.format(type(self).__name__.lower()))
 
 class Fish(LifeForm):
   breathing_apparatus = 'gills'
