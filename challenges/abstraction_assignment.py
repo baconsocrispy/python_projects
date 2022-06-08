@@ -5,11 +5,13 @@
 # 3. create an object that utilizes both parent and child methods
 # 4. add comments throughout your code
 
+
+from abc import ABC, abstractmethod
 class LifeForm:
-  breathing_apparatus = ''
   alive = True
   # abstract method
-  def breathes(self):
+  @abstractmethod
+  def breathes(self, breathing_apparatus):
     pass
   # regular method
   def dies(self):
@@ -18,7 +20,6 @@ class LifeForm:
 
 class Fish(LifeForm):
   breathing_apparatus = 'gills'
-
   # child implements parent abstract class
   def breathes(self):
     print('The fish takes a breath through its {}'.format(self.breathing_apparatus))
