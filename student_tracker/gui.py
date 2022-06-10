@@ -35,15 +35,15 @@ def load_gui(self):
   self.list_scrollbar = Scrollbar(self.master, orient=VERTICAL)
   self.student_list = Listbox(self.master, width=40, exportselection=0, yscrollcommand=self.list_scrollbar.set)
   self.list_scrollbar.config(command=self.student_list.yview)
-  self.list_scrollbar.grid(row=1, column=5, rowspan=7, columnspan=1, padx=(0, 0), pady=(0, 0), sticky=NS)
-  self.student_list.grid(row=1, column=3, rowspan=7, columnspan=3, padx=(0, 0), pady=(0, 0), sticky=N+E+S+W)
+  self.list_scrollbar.grid(row=1, column=6, rowspan=7, columnspan=1, padx=(0, 0), pady=(0, 0), sticky=NS)
+  self.student_list.grid(row=1, column=2, rowspan=7, columnspan=3, padx=(0, 0), pady=(0, 0), sticky=N+E+S+W)
 
   # create submit button 
   self.btn_submit = Button(self.master, text='Add', command=lambda: functions.add_student(self), borderless=1)
   self.btn_submit.grid(row=11, column=1, padx=(15, 0), pady=(15, 0), sticky=EW)
 
   # create a delete button
-  self.btn_submit = tk.Button(self.master, text='Delete', command=lambda: functions.delete_student(self))
+  self.btn_submit = Button(self.master, text='Delete', command=lambda: functions.delete_student(self), borderless=1)
   self.btn_submit.grid(row=11, column=2, padx=(15, 0), pady=(15, 0), sticky=EW)
 
   functions.on_refresh(self)
