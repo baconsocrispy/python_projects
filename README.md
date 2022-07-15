@@ -7,8 +7,8 @@ The projects in this repository were created as part of the Python Course I took
 
 ## Django Projects
 
--Hotel Management App
--Checkbook App
+--Hotel Management App
+--Checkbook App
 
 ### Hotel Management App
 
